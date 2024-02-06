@@ -1,0 +1,48 @@
+@import url("variableGlobales.css");
+
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+
+.size {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+}
+
+.nav>.logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.nav>.menu {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav>.menu>li {}
+
+.intro {
+    background-color: var(--colorAzulMarino);
+}
+
+.intro>.intro_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.intro>.intro_desc {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
