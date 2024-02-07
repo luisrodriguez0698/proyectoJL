@@ -218,7 +218,8 @@ body {
 .intro>.intro_grid>.intro_desc {
     grid-column: 1/2;
     grid-row: 1/2;
-    place-self: end;
+    place-self: start;
+    align-self: end;
 }
 
 .intro>.intro_grid>.intro_desc>h1 {
@@ -264,10 +265,12 @@ body {
     grid-column: 1/2;
     grid-row: 2/3;
     width: 100%;
+    display: flex;
 }
 
 .intro>.intro_wave>svg {
     width: 100%;
+    align-self: flex-end;
 }
 
 /**intro**/
