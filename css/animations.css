@@ -1,0 +1,76 @@
+/* Animación al hacer scroll hacia abajo */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+        /* Empieza y termina transparente */
+    }
+
+    50% {
+        opacity: 1;
+        /* Al 50%, es completamente visible */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Comienza completamente transparente */
+    }
+
+    to {
+        opacity: 1;
+        /* Termina completamente visible */
+    }
+
+    easing: ease-in-out;
+}
+
+
+
+@keyframes bxSpin {
+    17% {
+        border-bottom-right-radius: 3px;
+    }
+
+    25% {
+        transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+        transform: translateY(18px) scale(1, .9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+    }
+
+    75% {
+        transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+@keyframes shadow {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1);
+    }
+}

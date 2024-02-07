@@ -1,4 +1,5 @@
 @import url("variableGlobales.css");
+@import url("animations.css");
 
 * {
     margin: 0 0;
@@ -6,14 +7,128 @@
     font-family: var(--FontTitulo);
 }
 
-body {
-    margin: 0;
+html,
+html *,
+body,
+body * {
     cursor: none;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+#content {
+    display: none;
+    animation: fadeIn 1.5s forwards;
+    /* Animación de desvanecerse */
+}
+
+/**cursor**/
+#cursor {
+    display: none;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    visibility: visible;
+}
+
+.cursor-dot.has-hover,
+.cursor-dot-outline.has-hover {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0.3;
+}
+
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--colorAzulRey);
+    visibility: visible;
+}
+
+.cursor-dot-outline {
+    width: 20px;
+    height: 20px;
+    visibility: visible;
+}
+
+.cursor-dot-outline:after {
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid var(--colorBlanco3);
+    position: absolute;
+    content: "";
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/**cursor**/
+
+
+/**loader**/
+#loader-wrapper {
+    background-color: var(--colorAzulMarino);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
 
 }
 
-/**RECURSOS**/
+.loader {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeInOut 2s forwards;
+}
 
+.loader:before {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background: #000;
+    opacity: 0.25;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow 0.5s linear infinite;
+}
+
+.loader:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: bxSpin 0.5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+}
+
+/**loader**/
+
+/**RECURSOS**/
 .size {
     width: 70%;
     margin: 0 auto;
@@ -24,41 +139,29 @@ body {
     align-items: center;
 }
 
-/* Agregar este estilo para el menú pegajoso */
-.sticky {
-    z-index: 1;
+.menu-fixed {
     position: fixed;
-    top: 0;
+    z-index: 10;
+    top: -1%;
     width: 100%;
-    height: 5%;
-    padding: .5rem 0;
-    animation: slideDown 0.4s ease-in-out;
+    height: 7%;
     background-color: var(--colorAzulRey);
-}
-
-/* Animación al hacer scroll hacia abajo */
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
+    animation: slideDown 0.3s ease;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .5);
 }
 
 /**RECURSOS**/
 
 /**menu**/
-
 .grid>.nav {
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     position: absolute;
-    top: 1%;
+    top: 0;
     place-self: center;
+    padding: 1rem 0;
 }
 
 .grid>.nav>.logo {
@@ -77,24 +180,27 @@ body {
 .grid>.nav>.menu>li>a,
 .logo>h3 {
     color: var(--colorBlanco);
-    cursor: none;
 }
 
 .menu>li>a {
     text-decoration: none;
 }
 
+.menu>li>a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /**menu**/
 
 /**intro**/
-
 .intro {
     background-color: var(--colorAzulMarino);
 
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 60% 40%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .intro_container {}
@@ -132,7 +238,7 @@ body {
 
 .intro_btn:hover {
     background-color: var(--colorAzulRey);
-    cursor: none;
+    cursor: pointer;
 }
 
 /**intro_carousel**/
@@ -165,29 +271,3 @@ body {
 }
 
 /**intro**/
-
-/**cursor**/
-#custom-cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--colorAzulRey);
-    pointer-events: none;
-    z-index: 1000;
-    cursor: none;
-}
-
-#cursor_back {
-    width: 2rem;
-    height: 2rem;
-    border: 2px solid var(--colorBlanco);
-    border-radius: 50%;
-    position: absolute;
-    transition-duration: 100ms;
-    pointer-events: none;
-    z-index: 1000;
-    cursor: none;
-}
-
-/**cursor**/
