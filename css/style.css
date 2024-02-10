@@ -14,15 +14,18 @@ body * {
     cursor: none;
 }
 
-
 body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 #content {
     display: none;
     animation: fadeIn 1.5s forwards;
     /* Animación de desvanecerse */
+}
+
+#menuNavMobile {
+    display: none;
 }
 
 /**cursor**/
@@ -203,8 +206,6 @@ body {
     /* overflow: hidden; */
 }
 
-.intro_container {}
-
 .intro>.intro_grid {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -253,6 +254,17 @@ body {
     height: 600px;
     overflow: hidden;
     display: flex;
+}
+
+.carousel-item {
+    width: 100%;
+}
+
+#introCarouselControls .carousel-inner .carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .carousel-inner {

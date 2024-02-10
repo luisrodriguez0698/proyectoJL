@@ -12,3 +12,24 @@
         </ul>
     </nav>
 </div>
+
+<div id="menuNavMobile">
+    <nav class="nav">
+        <div class="logoMobile">
+            <span>name</span>
+            <div class="menuBurguer">
+                <i class="fa fa-bars" onclick="toggleMenu()"></i>
+            </div>
+        </div>
+
+        <div class="barMenu" id="Menu">
+            <ul>
+                <li><a href="#">inicio</a></li>
+                <li><a href="#">servicios</a></li>
+                <li><a href="#">precios</a></li>
+                <li><a href="#">testimonios</a></li>
+                <li><a href="#">contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>

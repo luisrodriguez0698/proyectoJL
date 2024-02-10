@@ -40,7 +40,7 @@ include_once "./header.php";
             </div>
         </section>
 
-        <section class="services">
+        <!-- <section class="services">
             <div class="services_grid">
                 <div class="services_target">
                     <div class="st_desc">
@@ -52,7 +52,7 @@ include_once "./header.php";
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 </div>
 

@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }, 3000); // Simula un tiempo de carga de 2 segundos
 
-
     var cursor = {
         delay: 8,
         _x: 0,
@@ -163,3 +162,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+
+
+
+    //MenuMobil
+    function toggleMenu() {
+      console.log("hola");
+      var menu = document.getElementById('Menu');
+      menu.classList.toggle('show');
+  }
