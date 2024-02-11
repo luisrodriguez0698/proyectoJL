@@ -40,19 +40,40 @@ include_once "./header.php";
             </div>
         </section>
 
-        <!-- <section class="services">
+        <section class="services size">
             <div class="services_grid">
-                <div class="services_target">
-                    <div class="st_desc">
+                <div class="st-1 services_target ">
+                    <div class="st_desc-1">
                         <h3>Desarrollo de sitios web</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ut perferendis amet voluptas rem possimus eum cupiditate officia ipsum adipisci, quaerat minus dignissimos unde tempora porro harum accusantium autem nisi.</p>
+                        <button>ver más</button>
                     </div>
-                    <div>
-                        <img src="img/carousel/C_1.png" alt="">
+                    <div class="st_img-1">
+                        <img src="img/servicios/S-1.png" alt="Services_1">
+                    </div>
+                </div>
+                <div class="st-2 services_target ">
+                    <div class="st_desc-2">
+                        <h3>Aplicaciones moviles</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ut perferendis amet voluptas rem possimus eum cupiditate officia ipsum adipisci, quaerat minus dignissimos unde tempora porro harum accusantium autem nisi.</p>
+                        <button>ver más</button>
+                    </div>
+                    <div class="st_img-2">
+                        <img src="img/servicios/S-2.png" alt="Services_1">
+                    </div>
+                </div>
+                <div class="st-3 services_target ">
+                    <div class="st_desc-3">
+                        <h3>Diseños y MKT Digital</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ut perferendis amet voluptas rem possimus eum cupiditate officia ipsum adipisci, quaerat minus dignissimos unde tempora porro harum accusantium autem nisi.</p>
+                        <button>ver más</button>
+                    </div>
+                    <div class="st_img-3">
+                        <img src="img/servicios/S-3.png" alt="Services_1">
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
     </main>
 </div>
 
@@ -60,7 +81,7 @@ include_once "./header.php";
     <div class="cursor-dot-outline"></div>
     <div class="cursor-dot"></div>
 </div>
-
+<script src="js/animation.js"></script>
 <?php
 include_once "./footer.php";
 ?>

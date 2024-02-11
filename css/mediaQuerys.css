@@ -1,4 +1,7 @@
 /*ESTILOS PARA TELÉFONOS*/
+@import url("variableGlobales.css");
+@import url("animations.css");
+
 @media only screen and (max-width: 820px) {
 
     .intro {
@@ -39,93 +42,6 @@
         display: flex;
     }
 
-    #menuNav {
-        display: none;
-    }
-
-    #menuNavMobile {
-        display: block;
-        position: absolute;
-        width: 100%;
-    }
-
-
-
-    #cursor,
-    .cursor-dot-outline,
-    .cursor-dot {
-        display: none;
-    }
-
-    .nav {
-        background-color: #000;
-        z-index: 5;
-        padding: 0.5rem 0;
-    }
-
-    .menuBurguer {
-        display: block;
-        /* padding: 1rem; */
-        text-align: end;
-        margin: auto 0;
-    }
-
-    .menuBurguer i {
-        font-size: 2rem;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .logoMobile {
-        display: block;
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1.2rem;
-        margin: 0 0;
-        width: 100%;
-    }
-
-    .logoMobile span {
-        padding: .5rem 0;
-    }
-
-    .barMenu {
-        display: none;
-        opacity: 0;
-        width: 100%;
-        padding: 0 0;
-        margin: 0 0;
-        transition: all 0.5s ease-in-out;
-        z-index: 2;
-    }
-
-    .barMenu ul {
-        background-color: rgba(0, 0, 0, 0.95);
-        list-style-type: none;
-        text-align: center;
-        padding: 0.7rem 0;
-        margin: 0 0;
-        /* margin-top: 3rem; */
-    }
-
-    .barMenu ul li {
-        /* padding: .5rem 0; */
-        width: 100%;
-        margin: 0 0;
-        padding: 1rem 0;
-    }
-
-    .barMenu ul li a {
-        width: 100%;
-        font-size: 1.2rem;
-        color: #fff;
-    }
-
-    .show {
-        display: block;
-        opacity: 1;
-    }
 }
 
 /*ESTILOS PARA TABLETS*/
@@ -139,6 +55,12 @@
         font-size: 3rem;
     }
 
+
+}
+
+/*ajuste para menu tablet y mobil*/
+@media only screen and (max-width:1059px) {
+
     #menuNav {
         display: none;
     }
@@ -149,8 +71,6 @@
         width: 100%;
     }
 
-
-
     #cursor,
     .cursor-dot-outline,
     .cursor-dot {
@@ -158,7 +78,7 @@
     }
 
     .nav {
-        background-color: #000;
+        background-color: #000000;
         z-index: 5;
         padding: 0.5rem 0;
     }
@@ -172,13 +92,13 @@
 
     .menuBurguer i {
         font-size: 2rem;
-        color: #fff;
+        color: var(--colorBlanco);
         cursor: pointer;
     }
 
     .logoMobile {
         display: block;
-        color: #fff;
+        color: var(--colorBlanco);
         display: flex;
         justify-content: space-between;
         padding: 0 1.2rem;
@@ -219,14 +139,13 @@
     .barMenu ul li a {
         width: 100%;
         font-size: 1.2rem;
-        color: #fff;
+        color: var(--colorBlanco);
     }
 
     .show {
         display: block;
         opacity: 1;
     }
-
 }
 
 /*ESTILOS PARA PC con tamaños mas pequeños*/

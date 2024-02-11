@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    //loader
+    // // loader
     setTimeout(function() {
         // Oculta el loader y muestra el contenido después de cierto tiempo
         document.getElementById("loader-wrapper").style.display = "none";
         document.getElementById("cursor").style.display = "block";
         document.getElementById("content").style.display = "block";
 
-    }, 3000); // Simula un tiempo de carga de 2 segundos
+    }, 1000); // Simula un tiempo de carga de 2 segundos
 
     var cursor = {
         delay: 8,
@@ -161,13 +161,16 @@ document.addEventListener("DOMContentLoaded", function() {
       cursor.init();
 
 
+
+    
 });
 
 
 
     //MenuMobil
     function toggleMenu() {
-      console.log("hola");
       var menu = document.getElementById('Menu');
       menu.classList.toggle('show');
   }
+
+
